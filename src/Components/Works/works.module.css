@@ -1,0 +1,152 @@
+.works {
+  padding: 60px 0; /* Increased padding for top and bottom */
+  background-color: #d1cbe2; /* Slightly darker shade of #3b2e5a */
+  animation: fadeInSlideUp 1s ease-in-out; /* Apply animation */
+  min-height: 100vh; /* Enlarged vertical height */
+}
+
+/* h2 {
+  color: #3b2e5a;
+} */
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Start from bottom */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End at original position */
+  }
+}
+
+.title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 40px; /* Increased margin for bottom */
+  color: #3b2e5a;
+  text-decoration: underline;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; /* Adjust for extra width */
+  flex-wrap: wrap;
+  margin: 20px 0; /* Increased margin for top and bottom */
+}
+
+.project {
+  width: calc(33.33% - 20px); /* Adjust for extra width */
+  margin: 40px 10px; /* Increased margin for top and bottom */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Include opacity transition */
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  opacity: 0.5; /* Dimming effect on hover */
+}
+
+.firstProject {
+  padding-left: 15px; /* Add left padding to the first project */
+}
+
+.lastProject {
+  padding-right: 15px; /* Add right padding to the last project */
+}
+
+.projectDetails {
+  padding: 30px; /* Increased padding for top and bottom */
+  text-align: center;
+}
+
+.projectTitle {
+  text-decoration: none; /* Ensure this rule is applied */
+  color: black; /* Set text color to black */
+}
+
+.link {
+  text-decoration: none; /* Remove underline from link */
+  color: inherit; /* Inherit color from the h3 element */
+}
+
+.image {
+  width: 100%;
+  height: 273px; /* Set fixed height */
+  object-fit: cover; /* Adjust to cover the container */
+}
+
+.frameworks {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0; /* Increased padding for top and bottom */
+}
+
+.addTopPadding {
+  padding-top: 40px; /* Increased padding for top */
+}
+
+.icon {
+  font-size: 2em;
+  margin: 0 5px;
+}
+
+/* Add individual colors for each icon */
+.icon.html {
+  color: #e34f26; /* HTML5 color */
+}
+
+.icon.css {
+  color: #1572b6; /* CSS3 color */
+}
+
+.icon.react {
+  color: #61dafb; /* React color */
+}
+
+.icon.node {
+  color: #339933; /* Node.js color */
+}
+
+.icon.express {
+  color: #000000; /* Express color (usually black) */
+}
+
+.icon.javascript {
+  color: #f7df1e; /* JavaScript color */
+}
+
+.icon.bootstrap {
+  color: #563d7c; /* Bootstrap color */
+}
+
+.icon.mysql {
+  color: #00758f; /* MySQL color */
+}
+
+.icon.firebase {
+  color: #ffca28; /* Firebase color */
+}
+
+/* Media query for smaller devices */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center; /* Center the projects container */
+  }
+
+  .project {
+    width: 95%; /* Reduce width for better spacing */
+    margin: 10px auto; /* Center projects with margin auto */
+  }
+
+  .firstProject {
+    padding-left: 0; /* Remove left padding on smaller devices */
+  }
+
+  .lastProject {
+    padding-right: 0; /* Remove right padding on smaller devices */
+  }
+}

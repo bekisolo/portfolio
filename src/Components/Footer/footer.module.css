@@ -1,0 +1,35 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #333; /* Change the color for better contrast */
+  height: 60px; /* Small height similar to the header */
+  position: relative;
+}
+
+.separator {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid #555;
+  margin: 0;
+}
+
+.socialMedia {
+  display: flex;
+  gap: 20px; /* Increase gap for better spacing */
+  position: absolute;
+  right: 20px; /* Align to the right corner */
+  padding-top: 70px;
+}
+
+.icon {
+  color: #000; 
+  font-size: 36px; /* Icon size */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.icon:hover {
+  color: grey; /* Hover color */
+}

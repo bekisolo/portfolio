@@ -1,0 +1,102 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Adjust as needed */
+  padding: 20px;
+  background-color: #3b2e5a; /* Background color */
+  text-align: center; /* Center the text */
+  margin-bottom: 0; /* Ensure no extra margin is added */
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: 2em;
+  font-family: "Roboto", serif;
+  color: #fff; /* Adjust text color for contrast */
+  text-decoration: underline;
+}
+
+h3 {
+  font-family: "Roboto", serif;
+  font-size: 1.25em;
+  color: #fff; /* Adjust text color for contrast */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px; /* Optional max width */
+  width: 100%;
+}
+
+.left {
+  flex: 1;
+  padding: 20px;
+  opacity: 0; /* Initial opacity for animation */
+  animation: slideInFromLeft 1s forwards; /* Animation for left div */
+}
+
+.right {
+  flex: 2;
+  padding: 20px;
+  text-align: left; /* Align text to the left */
+  opacity: 0; /* Initial opacity for animation */
+  animation: slideInFromRight 1s forwards; /* Animation for right div */
+}
+
+.right p {
+  font-size: 1em;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: justify; /* Justify text for straight edges */
+  margin-bottom: 20px; /* Add space between paragraphs */
+  color: #fff; /* Adjust text color for contrast */
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Optional: add some border radius to the image */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* More pronounced drop shadow */
+}
+
+/* Keyframes for slide-in animations */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Add media queries for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    text-align: center;
+  }
+}

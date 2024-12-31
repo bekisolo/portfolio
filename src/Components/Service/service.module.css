@@ -1,0 +1,133 @@
+.service {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh; /* Adjust as needed */
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center; /* Center the text */
+  margin-top: 0; /* Ensure no extra margin is added */
+}
+
+.title {
+  margin-top: 40px; /* Add margin-top for title */
+  margin-bottom: 20px; /* Add margin-bottom for title */
+  font-size: 2em;
+  color: #3b2e5a;
+  text-decoration: underline;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; /* Space between left and right sections */
+  align-items: flex-start;
+  max-width: 1200px; /* Optional max width */
+  width: 100%;
+  margin-top: 40px; /* Add margin-top for container */
+  margin-bottom: 40px; /* Add margin-bottom for container */
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align cards to the left */
+  gap: 20px; /* Add gap between cards for spacing */
+  margin-right: 90px; /* Add margin to the right for spacing */
+  margin-bottom: 40px; /* Add margin-bottom for left section */
+  opacity: 0; /* Initial opacity for animation */
+  animation: slideInFromTop 1s forwards; /* Animation for left section */
+}
+
+.card {
+  background-color: #fff; /* White background for cards */
+  color: #333; /* Text color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  padding: 20px;
+  width: 100%; /* Full width for cards on mobile */
+  text-align: left; /* Align text to the left */
+  display: flex; /* Ensure content is displayed */
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center content vertically */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Slight upward movement */
+  opacity: 0.8; /* Dim effect */
+}
+
+.card h3 {
+  font-size: 1.25em;
+  font-family: "Roboto", serif;
+  margin: 10px 0;
+  color: #333; /* Ensure text color is visible */
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 100px;
+  margin-bottom: 40px; /* Add margin-bottom for right section */
+  opacity: 0; /* Initial opacity for animation */
+  animation: slideInFromTop 1s forwards; /* Animation for right section */
+}
+
+.image {
+  width: 570px; /* Adjust width for laptop size */
+  height: auto; /* Adjust height proportionally */
+  border-radius: 10px; /* Optional: add some border radius to the image */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* More pronounced drop shadow */
+}
+
+/* Add media queries for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* Adjust margin-top for mobile view */
+    margin-bottom: 20px; /* Adjust margin-bottom for mobile view */
+  }
+
+  .left {
+    margin-right: 0; /* Remove margin in mobile view */
+    width: 100%; /* Full width for left section on mobile */
+    align-items: center; /* Center align items on mobile */
+    margin-bottom: 20px; /* Adjust margin-bottom for mobile view */
+  }
+
+  .card {
+    width: 100%; /* Full width for cards on mobile */
+  }
+
+  .right {
+    margin: 20px auto;
+    width: 650px; /* Adjust width for mobile view */
+    max-width: 100%; /* Full width for right section on mobile */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px; /* Add padding for margin on both sides */
+    margin-bottom: 20px; /* Adjust margin-bottom for mobile view */
+  }
+
+  .image {
+    min-width: 550px; /* Adjust width for image on mobile view */
+  }
+}
+
+/* Keyframes for slide-in animation */
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
